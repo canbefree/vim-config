@@ -30,21 +30,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') | execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
-autocmd VimEnter * NERDTree | wincmd p
 
-nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
-
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-Plug 'fatih/vim-go', { 'tag': '*' }
-
-" Plugin options
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
-
-let g:fzf_action = { 'ctrl-e': 'edit' }
 
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'junegunn/fzf.vim'
@@ -55,11 +41,25 @@ let g:fzf_action = { 'ctrl-e': 'edit' }
 
 if exists('g:vscode')
 else
+	" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
+	Plug 'fatih/vim-go', { 'tag': '*' }
+
+	" Plugin options
+	Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+
+
+	" On-demand loading
+	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+	autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') | execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+	autocmd VimEnter * NERDTree | wincmd p
+
+	nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
 	" Plugin outside ~/.vim/plugged with post-update hook
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	nmap <C-p> :Files<CR>
 	nmap <C-e> :Buffers<CR>
+	let g:fzf_action = { 'ctrl-e': 'edit' }
 
 	" Multiple Plug commands can be written in a single line using | separators
 	Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
