@@ -42,10 +42,10 @@ let g:UltiSnipsEditSplit="vertical"
 if exists('g:vscode')
 else
 	" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-	Plug 'fatih/vim-go', { 'tag': '*' }
+	" Plug 'fatih/vim-go', { 'tag': '*' }
 
 	" Plugin options
-	Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+	" Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
 
 	" On-demand loading
@@ -65,14 +65,20 @@ else
 	Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 	Plug '~/my-prototype-plugin'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	" Use K to show documentation in preview window.
+	nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-	if has('nvim')
-  		Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	else
-  		Plug 'Shougo/deoplete.nvim'
-  		Plug 'roxma/nvim-yarp'
-  		Plug 'roxma/vim-hug-neovim-rpc'
-	endif
+" replace by coc
+"	if has('nvim')
+"  		Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"	else
+"  		Plug 'Shougo/deoplete.nvim'
+"  		Plug 'roxma/nvim-yarp'
+"  		Plug 'roxma/vim-hug-neovim-rpc'
+"	endif
+"
+"
 let g:deoplete#enable_at_startup = 1
 endif
 
