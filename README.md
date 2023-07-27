@@ -1,10 +1,4 @@
 #install 
 
 ### nvim 
-
-`curl -o ~/.config/nvim/init.vim  https://raw.githubusercontent.com/canbefree/vim-config/master/config.vim --create-dirs`
-
-### vim 
-
-`curl -o ~/.vimrc  https://raw.githubusercontent.com/canbefree/vim-config/master/config.vim`
-
+`git clone -b nvim https://github.com/canbefree/vim-config.git ~/.config/nvim`
