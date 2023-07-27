@@ -20,5 +20,15 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 Plug('junegunn/fzf', {['do'] = vim.fn['fzf#install']})
 Plug 'junegunn/fzf.vim'
 
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+
+-- 高亮语法插件
+Plug ('nvim-treesitter/nvim-treesitter', {['do']= vim.fn[':TSUpdate']})
+
 vim.call('plug#end')
 
+-- plugin config 
+require("nvim-treesitter.install").prefer_git = true
+require("plugin-config.nvim-tree")
+require("plugin-config.nvim-treesitter")
