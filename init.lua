@@ -1,0 +1,2 @@
+-- Basic Settings
+require("basic")
