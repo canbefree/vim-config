@@ -45,4 +45,18 @@ map('n', '<Leader>cd', function()
 	end
 end, { desc = 'Change Local Directory' })
 
+-- easy-align
+map(
+	{ 'n','x'},
+	'ga',
+	'<Plug>(EasyAlign)',
+	{desc = 'EasyAlign'}
+)
 
+-- nvim-tree
+map(
+	{ 'n','x'},
+	'tree',
+	':NvimTreeToggle<CR>',
+	{desc = 'NvimTreeToggle'}
+)

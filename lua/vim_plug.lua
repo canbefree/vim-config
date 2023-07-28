@@ -26,9 +26,22 @@ Plug 'nvim-tree/nvim-tree.lua'
 -- 高亮语法插件
 Plug ('nvim-treesitter/nvim-treesitter', {['do']= vim.fn[':TSUpdate']})
 
+-- surround 
+Plug 'tpope/vim-surround'
+
+-- 对齐工具
+Plug 'junegunn/vim-easy-align'
+
+
+-- golang语法工具
+Plug 'neovim/nvim-lspconfig'
+Plug 'ray-x/go.nvim'
+Plug 'ray-x/guihua.lua' -- recommended if need floating window support
+
 vim.call('plug#end')
 
 -- plugin config 
 require("nvim-treesitter.install").prefer_git = true
 require("plugin-config.nvim-tree")
 require("plugin-config.nvim-treesitter")
+require("plugin-config.go")
