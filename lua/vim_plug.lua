@@ -34,9 +34,14 @@ Plug 'junegunn/vim-easy-align'
 
 
 -- golang语法工具
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ray-x/go.nvim'
 Plug 'ray-x/guihua.lua' -- recommended if need floating window support
+
+-- TMux
+Plug 'christoomey/vim-tmux-navigator'
 
 vim.call('plug#end')
 
@@ -45,3 +50,4 @@ require("nvim-treesitter.install").prefer_git = true
 require("plugin-config.nvim-tree")
 require("plugin-config.nvim-treesitter")
 require("plugin-config.go")
+require("plugin-config.mason-lsconfig")
