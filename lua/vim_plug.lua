@@ -43,6 +43,10 @@ Plug 'ray-x/guihua.lua' -- recommended if need floating window support
 -- TMux
 Plug 'christoomey/vim-tmux-navigator'
 
+-- GO Dap
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+
 vim.call('plug#end')
 
 -- plugin config 
