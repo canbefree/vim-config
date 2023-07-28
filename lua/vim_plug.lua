@@ -47,6 +47,21 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 
+-- GO代码提示
+-- nvim-cmp and its plugins.
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+-- Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/cmp-emoji'
+Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug ('tzachar/cmp-tabnine', { ['do']=  vim.fn['./install.sh'] })
+-- dictionary cmp plugin
+Plug 'octaltree/cmp-look'
+
 vim.call('plug#end')
 
 -- plugin config 
@@ -55,3 +70,6 @@ require("plugin-config.nvim-tree")
 require("plugin-config.nvim-treesitter")
 require("plugin-config.go")
 require("plugin-config.mason-lsconfig")
+require("plugin-config.cmp")
+
+
