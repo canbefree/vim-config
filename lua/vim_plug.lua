@@ -62,6 +62,10 @@ Plug ('tzachar/cmp-tabnine', { ['do']=  vim.fn['./install.sh'] })
 -- dictionary cmp plugin
 Plug 'octaltree/cmp-look'
 
+Plug 'gfanto/fzf-lsp.nvim'
+Plug 'nvim-lua/plenary.nvim'
+
+
 vim.call('plug#end')
 
 -- plugin config 

@@ -68,7 +68,7 @@ cmp.setup({
             }
             local meta_type = vim_item.kind
             -- load lspkind icons
-            vim_item.kind = lspkind_icons[vim_item.kind] .. ""
+            -- vim_item.kind = lspkind_icons[vim_item.kind] .. ""
             if entry.source.name == "cmp_tabnine" then
                 vim_item.kind = lspkind_icons["Robot"]
                 -- vim_item.kind_hl_group = "CmpItemKindTabnine"
