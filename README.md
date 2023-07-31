@@ -6,6 +6,10 @@
 
 ### 安装字体
 
+curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
+
+./install Hack
+
 https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip
 
 
